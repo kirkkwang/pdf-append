@@ -20,13 +20,11 @@ Once that is installed, open Terminal (Mac) or Command Prompt (Windows) and pip 
 
 Place the PDFs that you want to process in the `folder_of_pdfs_to_process` folder. It should work for one file or a batch of files.
 
-Place the PDF you want to append in the `folder_with_pdf_to_append` folder and rename that file `pdf_to_be_appended.pdf`. There should only be one file here. I've added a dummy file in there to be replaced by your file.
-
-NOTE: If you want to keep your own filename then feel free to change it in the code. In a future version I will make it work regardless of the name of the PDF, just that no more than one PDF needs to be in there.
+Place the PDF you want to append in the `folder_with_pdf_to_append`. There should only be one PDF file this folder.
 
 The `output` folder is where all the processed files will end up. The filenames of the new files will have the exact same filename as the original. Your original files will not be altered or moved.
 
-In the Terminal or Command Prompt, `cd` over to the folder containing `pdf-append.py` and use the command `python3 pdf-append.py`.
+In the Terminal or Command Prompt, change to the directory that contains `pdf-append.py` and use the command `python3 pdf-append.py`.
 
 That's it! Open the `output` folder and you should see your files.
 

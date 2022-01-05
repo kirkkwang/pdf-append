@@ -25,6 +25,18 @@ def list_of_files(directory, pdf_to_append, dir_of_output):
             print(f'New file created: {merged_file}')
 
 
+def filename_of_pdf_to_append(directory):
+    count = 0
+    for file in Path(directory).iterdir():
+        if file.is_file() and file.suffix == '.pdf':
+            count+=1
+            if count > 1:
+                return "There are more than one PDF in ./folder_with_pdf_to_append"
+            else:
+                if file.is_file() and file.suffix == '.pdf':
+                    return file
+
+
 if __name__ == '__main__':
     
     ### MORE INSTRUCTIONS ###
@@ -32,8 +44,8 @@ if __name__ == '__main__':
     # put all the PDFs that need to be proccessed in './folder_of_pdfs_to_process/'
     folder_with_pdfs = './folder_of_pdfs_to_process/'
 
-    # put the PDF to be appended in './folder_with_pdf_to_append/' and rename it to 'pdf_to_be_appended.pdf'
-    pdf_file_to_append = './folder_with_pdf_to_append/pdf_to_be_appended.pdf'
+    # put the PDF to be appended in './folder_with_pdf_to_append/'
+    pdf_file_to_append = str(filename_of_pdf_to_append('./folder_with_pdf_to_append'))
 
     # all the proccessed files will apprear in './output/'
     output_folder = './output/'

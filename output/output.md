@@ -1,1 +1,1 @@
-### Processed files will go to this folder
+### Processed files will end up here
