@@ -33,8 +33,7 @@ def filename_of_pdf_to_append(directory):
             if count > 1:
                 return "There are more than one PDF in ./folder_with_pdf_to_append"
             else:
-                if file.is_file() and file.suffix == '.pdf':
-                    return file
+                return file
 
 
 if __name__ == '__main__':
